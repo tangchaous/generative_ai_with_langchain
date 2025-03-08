@@ -1,0 +1,49 @@
+## Overview
+
+**LangChain Expression Language (LCEL)**
+- a declarative language for composing chains
+- asynchronous processing, batching, streaming, fallbacks, and parallelism
+- integration with LangSmith
+
+## Chat Models
+
+exchange `messages` though `runnable interface`?
+
+### Message
+
+#### Role
+
+|Role|Description|
+|---|---|
+|system|`SystemMessage`|expected chat model behavior|
+|user|`HumanMessage`|Represents input from a user interacting with the model, usually in the form of text or other interactive input.|
+|assistant|`AIMessage`|response from the model, which can include text or a request to invoke tools.|
+|tool|`ToolMessage`|the results of a tool invocation back to the model after external data or processing has been retrieved. Used with chat models that support tool calling.|
+
+### imperative methods
+
+- `invoke` / `ainvoke`
+- `stream` / `astream` / `astream_events`
+- `batch` / `abatch`
+- `batch_as_completed` / `abatch_as_completed`
+
+### declarative methods
+
+- `bind_tools`
+- `with_structured_output`
+- `with_retry`
+- `with_fallbacks`
+- `configurable_fields`
+- `configurable_alternatives`
+
+> **NOTE**: differs from string-based old model interfaces (without 'chat' prefix)
+
+## Chain Composition
+
+
+
+## Tool Calling
+
+## Structured output
+
+## Multimodality
